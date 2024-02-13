@@ -1,3 +1,69 @@
+// localStorage.clear();
+
+function newTask() {
+  const inputNewTask = document.getElementById("input-new-task");
+  const buttonNewTask = document.getElementById("btn-new-task");
+  const localStorageKey = "to-do-list";
+
+  function taskExists(value) {
+    let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
+    if (values.length) {
+      for (let i = 0; i < values.length; i++) {
+        if (values[i].name === value) {
+          return true;
+        }
+      }
+      return false;
+    } else {
+      return false;
+    }
+  }
+
+  function addNewTask() {
+    if (!inputNewTask.value) {
+      // active modal
+      alert("Digite uma tarefa.");
+    } else if (taskExists(inputNewTask.value)) {
+      alert("Já existe uma task com esse nome.");
+      inputNewTask.value = "";
+    } else {
+      // increments to localStorage
+      let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
+
+      values.push({
+        name: inputNewTask.value,
+      });
+
+      localStorage.setItem(localStorageKey, JSON.stringify(values));
+
+      showValues();
+      inputNewTask.value = "";
+    }
+  }
+
+  buttonNewTask.addEventListener("click", addNewTask);
+
+  function showValues() {
+    const alert = document.querySelector(".alert");
+    let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
+    let todolist = document.getElementById("to-do-list");
+    todolist.innerHTML = "";
+
+    if (values.length) {
+      alert.classList.add("remove");
+    } else {
+      alert.classList.remove("remove");
+    }
+
+    for (let i = 0; i < values.length; i++) {
+      todolist.innerHTML += `<li>${values[i].name}<button id="btn-remove-task"></button></li>`;
+    }
+  }
+
+  showValues();
+}
+newTask();
+
 function colorMode() {
   const dark = document.getElementById("dark");
   const html = document.documentElement;
@@ -17,7 +83,6 @@ function colorMode() {
     dark.style.display = "inline-block";
   });
 }
-
 colorMode();
 
 function activeSearch() {
@@ -28,5 +93,4 @@ function activeSearch() {
     inputSearch.classList.toggle("active");
   });
 }
-
 activeSearch();

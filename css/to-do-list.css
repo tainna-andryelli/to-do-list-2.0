@@ -36,23 +36,29 @@
   color: var(--color-3);
 }
 
+.alert.remove {
+  display: none;
+}
+
 #to-do-list li {
   margin: 20px 20px 40px 20px;
   padding: 20px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 20px;
   border-radius: 20px;
   color: var(--color-5);
-  /* display: none; */
   background-color: var(--color-1);
   border: 1px solid var(--color-2);
   box-shadow: 0 2px 5px var(--color-3);
+  text-transform: capitalize;
 }
 
 #to-do-list li button {
-  background-color: var(--color-2);
-  padding: 5px 8px;
-  border-radius: 4px;
+  background-color: var(--color-3);
+  padding: 8px;
+  border-radius: 9px;
   cursor: pointer;
   width: 40px;
 }

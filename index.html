@@ -16,7 +16,7 @@
     <div class="content-intro">
       <h1>To Do List</h1>
       <div class="intro-btns">
-        <button class="search">
+        <button class="search" title="Clique aqui para pesquisar uma task">
           <svg width="30" height="30" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_2_28)">
               <g clip-path="url(#clip1_2_28)">
@@ -59,8 +59,8 @@
         </button>
       </div>
       <div class="intro-add">
-        <input type="text" name="new-tak" id="new-task" placeholder="Digite sua nova tarefa aqui.">
-        <button id="add-task">
+        <input type="text" name="new-tak" id="input-new-task" placeholder="Digite sua nova tarefa aqui.">
+        <button id="btn-new-task" title="Clique aqui para adicionar uma nova task">
           <svg width="40" height="40" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M26 1C26.5525 1 27.0824 1.21949 27.4731 1.61019C27.8638 2.0009 28.0833 2.5308 28.0833 3.08333V23.9167H48.9167C49.4692 23.9167 49.9991 24.1362 50.3898 24.5269C50.7805 24.9176 51 25.4475 51 26C51 26.5525 50.7805 27.0824 50.3898 27.4731C49.9991 27.8638 49.4692 28.0833 48.9167 28.0833H28.0833V48.9167C28.0833 49.4692 27.8638 49.9991 27.4731 50.3898C27.0824 50.7805 26.5525 51 26 51C25.4475 51 24.9176 50.7805 24.5269 50.3898C24.1362 49.9991 23.9167 49.4692 23.9167 48.9167V28.0833H3.08333C2.5308 28.0833 2.0009 27.8638 1.61019 27.4731C1.21949 27.0824 1 26.5525 1 26C1 25.4475 1.21949 24.9176 1.61019 24.5269C2.0009 24.1362 2.5308 23.9167 3.08333 23.9167H23.9167V3.08333C23.9167 2.5308 24.1362 2.0009 24.5269 1.61019C24.9176 1.21949 25.4475 1 26 1Z" background-color="#7098ff" fill="#fefefe" stroke="#fefefe" stroke-width="2" />
           </svg>
@@ -68,7 +68,6 @@
       </div>
     </div>
     <div>
-      <span class="alert">Adicione uma tarefa.</span>
       <div class="input-search">
         <svg width="30" height="30" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_2_28)">
@@ -87,15 +86,9 @@
         </svg>
         <input type="text" id="search" placeholder="Search">
       </div>
+      <span class="alert">Adicione uma tarefa.</span>
       <ul id="to-do-list">
-        <!-- <li>
-          <button></button>
-          <p></p>
-        </li> -->
-        <li>
-          <button></button>
-          <p>Passear</p>
-        </li>
+        <!-- <li>Task<button></button></li> -->
       </ul>
     </div>
   </section>

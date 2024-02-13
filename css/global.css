@@ -9,7 +9,6 @@ body {
   box-sizing: border-box;
   padding: 20px;
   font-family: var(--font-principal);
-  height: 100vh;
   display: flex;
 }
 

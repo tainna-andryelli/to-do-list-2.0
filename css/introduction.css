@@ -40,7 +40,7 @@
   align-items: center;
 }
 
-input#new-task {
+#input-new-task {
   height: 40px;
   padding: 15px 30px;
   border-radius: 50px;
@@ -52,19 +52,19 @@ input#new-task {
   width: calc(100% - 120px);
 }
 
-.dark-mode input#new-task {
+.dark-mode #input-new-task {
   border: 1px solid var(--color-2);
 }
 
-#add-task {
+#btn-new-task {
   cursor: pointer;
 }
 
-#add-task:hover {
+#btn-new-task:hover {
   opacity: 50%;
 }
 
-.dark-mode #add-task svg path {
+.dark-mode #btn-new-task svg path {
   fill: var(--color-5);
   stroke: var(--color-5);
 }
