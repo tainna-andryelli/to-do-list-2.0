@@ -1,0 +1,16 @@
+:root {
+  --color-0: #ebebeb;
+  --color-1: #fefefe;
+  --color-2: #e4e4e4;
+  --color-3: #adadad;
+  --color-4: #7098ff;
+  --color-5: #333333;
+}
+
+.dark-mode:root {
+  --color-1: #fefefe;
+  --color-2: #e4e4e4;
+  --color-3: #333;
+  --color-4: #deda02;
+  --color-5: #0a0a0a;
+}

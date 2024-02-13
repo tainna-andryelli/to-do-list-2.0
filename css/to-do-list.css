@@ -1,0 +1,70 @@
+.input-search {
+  margin: 20px 20px 40px 20px;
+  padding: 10px;
+  border: 1px solid var(--color-2);
+  border-radius: 20px;
+  gap: 20px;
+  box-shadow: 0 2px 5px var(--color-3);
+  background-color: var(--color-1);
+  align-items: center;
+  display: none;
+}
+
+.input-search.active {
+  display: flex;
+}
+
+.dark-mode .input-search svg path {
+  fill: var(--color-5);
+}
+
+#search {
+  color: var(--color-5);
+  border: none;
+  font-size: 1.125rem;
+  font-weight: 300;
+  display: flex;
+  width: 100%;
+}
+
+.alert {
+  margin: 0 20px 40px 20px;
+  padding: 40px 20px 20px 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color-3);
+}
+
+#to-do-list li {
+  margin: 20px 20px 40px 20px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  border-radius: 20px;
+  color: var(--color-5);
+  /* display: none; */
+  background-color: var(--color-1);
+  border: 1px solid var(--color-2);
+  box-shadow: 0 2px 5px var(--color-3);
+}
+
+#to-do-list li button {
+  background-color: var(--color-2);
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 40px;
+}
+
+#to-do-list li button::before {
+  content: "";
+  background: url("../assets/check.svg") no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+#to-do-list li button:hover {
+  opacity: 50%;
+}

@@ -1,0 +1,70 @@
+.content-intro {
+  background-color: var(--color-4);
+  border-radius: 40px 40px 0 0;
+  box-shadow: 0 2px 5px var(--color-3);
+  padding: 40px;
+  color: var(--color-1);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-mode .content-intro {
+  color: var(--color-5);
+}
+
+.intro-btns button {
+  cursor: pointer;
+  padding: 20px;
+  display: inline;
+}
+
+.intro-btns button:hover {
+  opacity: 50%;
+}
+
+.intro-btns #light {
+  display: none;
+}
+
+.dark-mode .intro-btns .search svg path {
+  fill: var(--color-5);
+}
+
+.intro-add {
+  grid-column: -1/1;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  align-items: center;
+}
+
+input#new-task {
+  height: 40px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  color: var(--color-5);
+  background-color: var(--color-1);
+  font-family: var(--font-principal);
+  font-size: 1.125rem;
+  border: 1px solid var(--color-3);
+  width: calc(100% - 120px);
+}
+
+.dark-mode input#new-task {
+  border: 1px solid var(--color-2);
+}
+
+#add-task {
+  cursor: pointer;
+}
+
+#add-task:hover {
+  opacity: 50%;
+}
+
+.dark-mode #add-task svg path {
+  fill: var(--color-5);
+  stroke: var(--color-5);
+}
