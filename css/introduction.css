@@ -68,3 +68,32 @@
   fill: var(--color-5);
   stroke: var(--color-5);
 }
+
+@media (max-width: 600px) {
+  .content-intro {
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .intro-btns button {
+    padding: 10px;
+  }
+
+  #input-new-task {
+    padding: 10px 20px;
+    width: calc(100% - 90px);
+  }
+}
+
+@media (max-width: 400px) {
+  #input-new-task {
+    padding: 10px;
+    font-size: 1rem;
+    width: calc(100% - 60px);
+  }
+
+  #btn-new-task svg {
+    width: 30px;
+    height: 30px;
+  }
+}

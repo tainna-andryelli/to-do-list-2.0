@@ -74,3 +74,12 @@
 #to-do-list li button:hover {
   opacity: 50%;
 }
+
+@media (max-width: 400px) {
+  #to-do-list li,
+  .alert {
+    margin: 10px 10px 20px 10px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
