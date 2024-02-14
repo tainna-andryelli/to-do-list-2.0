@@ -56,13 +56,13 @@ function showValues() {
   for (let i = 0; i < values.length; i++) {
     todolist.innerHTML += `<li>${values[i].name} <button class="btn-remove-task"></button></li>`;
   }
-  let btnRemove = document.querySelectorAll(".btn-remove-task");
-  remove(btnRemove);
+  let btnsRemove = document.querySelectorAll(".btn-remove-task");
+  remove(btnsRemove);
 }
 showValues();
 
-function remove(btnRemoveOK) {
-  btnRemoveOK.forEach((item, index) => {
+function remove(btnRemove) {
+  btnRemove.forEach((item, index) => {
     item.addEventListener("click", () => {
       let values = JSON.parse(localStorage.getItem(localStorageKey));
       values.splice(index, 1);
@@ -97,9 +97,15 @@ colorMode();
 function activeSearch() {
   const buttonSearch = document.querySelector(".search");
   const inputSearch = document.querySelector(".input-search");
+  let values = JSON.parse(localStorage.getItem(localStorageKey));
 
   buttonSearch.addEventListener("click", () => {
     inputSearch.classList.toggle("active");
   });
 }
 activeSearch();
+
+let search = document.querySelector(".input-search.active");
+if (search) {
+  console.log(search.value);
+}
