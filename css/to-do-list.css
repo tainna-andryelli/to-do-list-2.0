@@ -55,6 +55,11 @@
   text-transform: capitalize;
 }
 
+#to-do-list li:hover {
+  background: var(--color-0);
+  padding-left: 30px;
+}
+
 #to-do-list li button {
   background-color: var(--color-3);
   padding: 8px;
