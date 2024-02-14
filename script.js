@@ -103,6 +103,14 @@ function activeSearch() {
     search.classList.toggle("active");
   });
 
+  inputSearch.addEventListener("focus", () => {
+    search.style.borderColor = "var(--color-5)";
+  });
+
+  inputSearch.addEventListener("blur", () => {
+    search.style.borderColor = "var(--color-2)";
+  });
+
   inputSearch.addEventListener("keyup", () => {
     let taskSearch = inputSearch.value.toLowerCase();
     let tasksList = document.querySelectorAll("#to-do-list li");

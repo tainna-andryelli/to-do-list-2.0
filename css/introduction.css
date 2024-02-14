@@ -56,6 +56,10 @@
   border: 1px solid var(--color-2);
 }
 
+#input-new-task:focus {
+  border-color: var(--color-5);
+}
+
 #btn-new-task {
   cursor: pointer;
 }
