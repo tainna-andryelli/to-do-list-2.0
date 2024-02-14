@@ -22,7 +22,7 @@ function addNewTask() {
     // active modal
     alert("Digite uma tarefa.");
   } else if (taskExists(inputNewTask.value)) {
-    alert("Já existe uma task com esse nome.");
+    alert("Já existe uma tarefa com esse nome.");
     inputNewTask.value = "";
   } else {
     // increments to localStorage
@@ -95,17 +95,25 @@ function colorMode() {
 colorMode();
 
 function activeSearch() {
-  const buttonSearch = document.querySelector(".search");
-  const inputSearch = document.querySelector(".input-search");
-  let values = JSON.parse(localStorage.getItem(localStorageKey));
+  const buttonSearch = document.querySelector(".button-search");
+  const inputSearch = document.getElementById("input-search");
+  const search = document.querySelector(".search");
 
   buttonSearch.addEventListener("click", () => {
-    inputSearch.classList.toggle("active");
+    search.classList.toggle("active");
+  });
+
+  inputSearch.addEventListener("keyup", () => {
+    let taskSearch = inputSearch.value.toLowerCase();
+    let tasksList = document.querySelectorAll("#to-do-list li");
+
+    tasksList.forEach((task) => {
+      if (task.innerText.toLowerCase().includes(taskSearch)) {
+        task.style.display = "flex";
+      } else {
+        task.style.display = "none";
+      }
+    });
   });
 }
 activeSearch();
-
-let search = document.querySelector(".input-search.active");
-if (search) {
-  console.log(search.value);
-}

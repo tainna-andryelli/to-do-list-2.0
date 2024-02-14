@@ -28,7 +28,7 @@
   display: none;
 }
 
-.dark-mode .intro-btns .search svg path {
+.dark-mode .intro-btns .button-search svg path {
   fill: var(--color-5);
 }
 

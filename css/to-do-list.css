@@ -1,4 +1,4 @@
-.input-search {
+.search {
   margin: 20px 20px 40px 20px;
   padding: 10px;
   border: 1px solid var(--color-2);
@@ -10,15 +10,15 @@
   display: none;
 }
 
-.input-search.active {
+.search.active {
   display: flex;
 }
 
-.dark-mode .input-search svg path {
+.dark-mode .search svg path {
   fill: var(--color-5);
 }
 
-#search {
+#input-search {
   color: var(--color-5);
   border: none;
   font-size: 1.125rem;
