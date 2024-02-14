@@ -19,11 +19,9 @@ function taskExists(value) {
 
 function addNewTask() {
   if (!inputNewTask.value) {
-    // active modal
-    alert("Digite uma tarefa.");
+    activeModal("Escreva uma tarefa para ser adicionada na lista.");
   } else if (taskExists(inputNewTask.value)) {
-    alert("Já existe uma tarefa com esse nome.");
-    inputNewTask.value = "";
+    activeModal("Já existe uma tarefa com esse nome.");
   } else {
     // increments to localStorage
     let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
@@ -125,3 +123,20 @@ function activeSearch() {
   });
 }
 activeSearch();
+
+function activeModal(text) {
+  const modalContainer = document.querySelector(".modal-container");
+  const description = document.querySelector(".modal p");
+
+  modalContainer.classList.add("active");
+  description.innerHTML = text;
+
+  window.addEventListener("click", (e) => {
+    if (
+      e.target.className == "modal-container active" ||
+      e.target.className == "btn-modal"
+    ) {
+      modalContainer.classList.remove("active");
+    }
+  });
+}
