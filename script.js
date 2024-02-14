@@ -7,7 +7,7 @@ function taskExists(value) {
   let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
   if (values.length) {
     for (let i = 0; i < values.length; i++) {
-      if (values[i].name === value) {
+      if (values[i].name.toLowerCase() === value.toLowerCase()) {
         return true;
       }
     }
