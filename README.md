@@ -1,6 +1,8 @@
 # 📄To Do List 2.0 📄
 Welcome to my second version of the To Do List project. In this new project, I tried to bring a new design and new features, for example I used localStorage technology. Hope you like this!
 
+Click here to view: https://to-do-list-2-0-snowy.vercel.app/
+
 ## 👀 Preview:
 ![image](https://github.com/tainna-andryelli/to-do-list-2.0/assets/76691875/af37efd7-815c-46f8-9935-1ee6aee6199b)
 
